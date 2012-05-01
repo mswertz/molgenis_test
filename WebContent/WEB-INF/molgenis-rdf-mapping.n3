@@ -21,9 +21,9 @@
 # Should be jndi loaded!
 map:database a d2rq:Database;
 	d2rq:jdbcDriver "oracle.jdbc.driver.OracleDriver";
-	d2rq:jdbcDSN "jdbc:oracle:thin:@//localhost:2000/llptest";
+	d2rq:jdbcDSN "jdbc:oracle:thin:@//localhost/molgenis";
 	d2rq:username "molgenis";
-	d2rq:password "molTagtGen24Ora";
+	d2rq:password "molgenis";
 	jdbc:autoReconnect "true";
 	jdbc:zeroDateTimeBehavior "convertToNull";
 	.

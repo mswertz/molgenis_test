@@ -5,9 +5,11 @@
 		factory="org.apache.commons.dbcp.BasicDataSourceFactory" 
 		type="javax.sql.DataSource" 
 		username="molgenis"
-		password="molTagtGen24Ora" 
+		password="molgenis" 
 		driverClassName="oracle.jdbc.driver.OracleDriver" 
-		url="jdbc:oracle:thin:@//localhost:2000/llptest" 
+		url="jdbc:oracle:thin:@//localhost/molgenis?autoReconnect=true"
+		validationQuery="select now()"
+		maxWait="1000"
 		removeAbandoned="true"
 		maxActive="8" 
 		maxIdle="4"/>		

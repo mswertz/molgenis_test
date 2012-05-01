@@ -4,11 +4,12 @@ package org.molgenis.test.ui;
 import org.molgenis.framework.db.Database;
 import org.molgenis.framework.ui.EasyPluginController;
 import org.molgenis.framework.ui.ScreenController;
+import org.molgenis.framework.ui.ScreenView;
+import org.molgenis.framework.ui.html.ActionInput;
 import org.molgenis.framework.ui.html.FlowLayout;
 import org.molgenis.framework.ui.html.HtmlElement.UiToolkit;
-import org.molgenis.framework.ui.html.ActionInput;
 import org.molgenis.framework.ui.html.HtmlSettings;
-import org.molgenis.framework.ui.html.LabelInput;
+import org.molgenis.framework.ui.html.Label;
 import org.molgenis.framework.ui.html.MolgenisForm;
 import org.molgenis.framework.ui.html.SelectInput;
 import org.molgenis.framework.ui.html.VerticalLayout;
@@ -29,7 +30,7 @@ public class ChooseLibrary extends EasyPluginController<ChooseLibraryModel>
 
 	public ChooseLibrary(String name, ScreenController<?> parent)
 	{
-		super(name, null, parent);
+		super(name, parent);
 		this.setModel(new ChooseLibraryModel(this)); //the default model
 		//this.setView(new FreemarkerView("InputsTestView.ftl", getModel())); //<plugin flavor="freemarker"
 	}
@@ -59,11 +60,11 @@ public class ChooseLibrary extends EasyPluginController<ChooseLibraryModel>
 		
 	}
 	
-	public String render()
+	public ScreenView getView()
 	{
 		MolgenisForm main = new MolgenisForm(this, new VerticalLayout());
 		
-		main.add(new LabelInput("select demo (and to change library used)"));
+		main.add(new Label("select demo (and to change library used)"));
 		
 		FlowLayout libraryPanel = new FlowLayout();
 		
@@ -77,6 +78,6 @@ public class ChooseLibrary extends EasyPluginController<ChooseLibraryModel>
 		
 		main.add(libraryPanel);
 		
-		return main.render();
+		return main;
 	}
 }
