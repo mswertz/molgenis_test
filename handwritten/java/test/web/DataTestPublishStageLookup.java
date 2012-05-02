@@ -19,9 +19,9 @@ public class DataTestPublishStageLookup {
 
 	// Oracle parameters
 	String dbDriverOracle = "oracle.jdbc.driver.OracleDriver";
-	String databaseOracle = "llpacc";
-	String dbUrlOracle = "jdbc:oracle:thin:@//localhost:2000/" + databaseOracle;
-	String dbUsernameOracle = "molgenis3";
+	String databaseOracle = "llp";
+	String dbUrlOracle = "jdbc:oracle:thin:@//192.168.30.21:1521/" + databaseOracle;
+	String dbUsernameOracle = "molgenis2";
 
 	// MSSQL parameters
 	String serverMSSQL = "WTZKH0077";
