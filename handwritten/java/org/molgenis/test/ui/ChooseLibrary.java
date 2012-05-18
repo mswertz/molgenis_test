@@ -54,7 +54,6 @@ public class ChooseLibrary extends EasyPluginController<ChooseLibraryModel>
 	{
 		logger.info("changelibrary: " + request);
 		String lib = request.getString("library");
-		if("DOJO".equals(lib)) HtmlSettings.uiToolkit = UiToolkit.DOJO;
 		if("JQUERY".equals(lib)) HtmlSettings.uiToolkit = UiToolkit.JQUERY;
 		if("DEFAULT".equals(lib)) HtmlSettings.uiToolkit = UiToolkit.ORIGINAL;
 		
