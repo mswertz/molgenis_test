@@ -9,19 +9,19 @@ package plugins.customhtmlheaders;
 
 import org.molgenis.framework.db.Database;
 import org.molgenis.framework.ui.EasyPluginController;
-import org.molgenis.framework.ui.EasyPluginModel;
 import org.molgenis.framework.ui.FreemarkerView;
 import org.molgenis.framework.ui.ScreenController;
 import org.molgenis.framework.ui.ScreenView;
 import org.molgenis.util.Tuple;
 
-public class CustomHtmlHeaders1 extends EasyPluginController<EasyPluginModel>
+public class CustomHtmlHeaders1 extends EasyPluginController<CustomHtmlHeaders1Model>
 {
 	private static final long serialVersionUID = 4955840752814990449L;
 
 	public CustomHtmlHeaders1(String name, ScreenController<?> parent)
 	{
 		super(name, parent);
+		this.setModel(new CustomHtmlHeaders1Model(this));
 	}
 
 	@Override
