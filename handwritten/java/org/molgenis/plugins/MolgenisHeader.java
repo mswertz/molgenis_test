@@ -8,8 +8,11 @@
 package org.molgenis.plugins;
 
 import org.molgenis.framework.db.Database;
-import org.molgenis.framework.ui.PluginModel;
+import org.molgenis.framework.ui.EasyPluginController;
+import org.molgenis.framework.ui.EasyPluginModel;
+import org.molgenis.framework.ui.FreemarkerView;
 import org.molgenis.framework.ui.ScreenController;
+import org.molgenis.framework.ui.ScreenView;
 import org.molgenis.util.Tuple;
 
 /**
@@ -19,23 +22,13 @@ import org.molgenis.util.Tuple;
  * 
  * @author Morris Swertz
  */
-public class MolgenisHeader extends PluginModel
+public class MolgenisHeader extends EasyPluginController<EasyPluginModel>
 {
+	private static final long serialVersionUID = -7775794887717460675L;
+
 	public MolgenisHeader(String name, ScreenController<?> parent)
 	{
 		super(name, parent);
-	}
-
-	@Override
-	public String getViewName()
-	{
-		return "plugins_header_MolgenisHeader";
-	}
-
-	@Override
-	public String getViewTemplate()
-	{
-		return "org/molgenis/plugins/MolgenisHeader.ftl";
 	}
 
 	@Override
@@ -54,5 +47,10 @@ public class MolgenisHeader extends PluginModel
 	public boolean isVisible()
 	{
 		return true;
+	}
+
+	@Override
+	public ScreenView getView() {
+		return new FreemarkerView("org/molgenis/plugins/MolgenisHeader.ftl", this.getModel());
 	}
 }

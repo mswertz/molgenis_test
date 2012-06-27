@@ -8,27 +8,20 @@
 package plugins.customhtmlheaders;
 
 import org.molgenis.framework.db.Database;
-import org.molgenis.framework.ui.PluginModel;
+import org.molgenis.framework.ui.EasyPluginController;
+import org.molgenis.framework.ui.EasyPluginModel;
+import org.molgenis.framework.ui.FreemarkerView;
 import org.molgenis.framework.ui.ScreenController;
+import org.molgenis.framework.ui.ScreenView;
 import org.molgenis.util.Tuple;
 
-public class CustomHtmlHeaders1 extends PluginModel
+public class CustomHtmlHeaders1 extends EasyPluginController<EasyPluginModel>
 {
+	private static final long serialVersionUID = 4955840752814990449L;
+
 	public CustomHtmlHeaders1(String name, ScreenController<?> parent)
 	{
 		super(name, parent);
-	}
-
-	@Override
-	public String getViewName()
-	{
-		return "plugins_customhtmlheaders_CustomHtmlHeaders1";
-	}
-
-	@Override
-	public String getViewTemplate()
-	{
-		return "plugins/customhtmlheaders/CustomHtmlHeaders1.ftl";
 	}
 
 	@Override
@@ -83,5 +76,10 @@ public class CustomHtmlHeaders1 extends PluginModel
 	public String getCustomHtmlHeaders()
 	{
 		return "<!--custom 1-->";
+	}
+	
+	@Override
+	public ScreenView getView() {
+		return new FreemarkerView("plugins/customhtmlheaders/CustomHtmlHeaders1.ftl", this.getModel());
 	}
 }

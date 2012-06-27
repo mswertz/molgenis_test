@@ -20,16 +20,10 @@
 
 # Should be jndi loaded!
 map:database a d2rq:Database;
-	d2rq:jdbcDriver "oracle.jdbc.driver.OracleDriver";
-<<<<<<< HEAD
-	d2rq:jdbcDSN "jdbc:oracle:thin:@//localhost/molgenis";
+	d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+	d2rq:jdbcDSN "jdbc:mysql://localhost/test_molgenis_test";
 	d2rq:username "molgenis";
 	d2rq:password "molgenis";
-=======
-	d2rq:jdbcDSN "jdbc:oracle:thin:@//localhost:2000/llptest";
-	d2rq:username "molgenis";
-	d2rq:password "molTagtGen24Ora";
->>>>>>> be13413f28f625dab901d4d8a19dfc893cb642df
 	jdbc:autoReconnect "true";
 	jdbc:zeroDateTimeBehavior "convertToNull";
 	.
