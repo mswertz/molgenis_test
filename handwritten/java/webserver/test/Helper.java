@@ -12,18 +12,19 @@ import app.servlet.MolgenisServlet;
 public class Helper {
 
 	public static void deleteDatabase() throws Exception {
-		File dbDir = new File("hsqldb");
-		if (dbDir.exists()) {
-			TarGz.recursiveDeleteContentIgnoreSvn(dbDir);
-		} else {
-			throw new Exception("HSQL database directory does not exist");
-		}
-
-		if (dbDir.list().length != 1) {
-			throw new Exception(
-					"HSQL database directory does not contain 1 file (.svn) after deletion! it contains: "
-							+ dbDir.list().toString());
-		}
+		throw new UnsupportedOperationException("Reimplement code below!");
+//		File dbDir = new File("hsqldb");
+//		if (dbDir.exists()) {
+//			TarGz.recursiveDeleteContentIgnoreSvn(dbDir);
+//		} else {
+//			throw new Exception("HSQL database directory does not exist");
+//		}
+//
+//		if (dbDir.list().length != 1) {
+//			throw new Exception(
+//					"HSQL database directory does not contain 1 file (.svn) after deletion! it contains: "
+//							+ dbDir.list().toString());
+//		}
 	}
 
 	/**

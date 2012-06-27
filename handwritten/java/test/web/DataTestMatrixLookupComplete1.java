@@ -21,15 +21,11 @@ import org.testng.annotations.Test;
 
 public class DataTestMatrixLookupComplete1 {
 
-<<<<<<< HEAD
+
 	String file = "H:/Data/Bevindingen/2012wk15/Export_All_2012-04-10_14_12_33 (192.168.30.34 molgenis3@llp).csv";
 	String databaseOracle = "llp";
 	String dbUsernameOracle = "molgenis3";
-=======
-	String file = "H:/Data/export/Export_All_2012-03-20_11_36_57_molgenis2_llp.csv";
-	String databaseOracle = "llp";
-	String dbUsernameOracle = "molgenis2";
->>>>>>> be13413f28f625dab901d4d8a19dfc893cb642df
+
 	String matrixStringDateFormat = "yyyy-mm-dd";
 	String dict = "select tabnaam, veld from vw_dict "
 			/* remove this part after meta data bug fix */
@@ -37,10 +33,7 @@ public class DataTestMatrixLookupComplete1 {
 			+ "minus select tabnaam, veld from vw_dict where tabnaam = 'ECGLEADS' and veld = 'PA_ID'"
 			+ "minus select tabnaam, veld from vw_dict where tabnaam = 'BLOEDDRUKAVG' and veld = 'PA_ID'"
 			+ "minus select tabnaam, veld from vw_dict where veld = 'ID'";
-<<<<<<< HEAD
-	
-=======
->>>>>>> be13413f28f625dab901d4d8a19dfc893cb642df
+
 	String dictValues = "select tabnaam, veld, vallabelabel, vallabelval from vw_dict_valuesets";
 	String[] idFields = { "ID", "PA_ID", "BZ_ID" };
 
@@ -284,23 +277,7 @@ public class DataTestMatrixLookupComplete1 {
 					System.out.println("FAILED. NOT FOUND IN CSV: "
 							+ sqlReconstruction(table, columns, lineparts));
 				}
-<<<<<<< HEAD
-//				if (count > 1) {
-//					if (count != linePartsInLinePartsList(lineparts, dbData)) {
-//						fail = true;
-//						System.out.println("FAILED. DIFFERENT ROWCOUNT: "
-//								+ sqlReconstruction(table, columns, lineparts));
-//					}
-//				}
-=======
-				if (count > 1) {
-					if (count != linePartsInLinePartsList(lineparts, dbData)) {
-						fail = true;
-						System.out.println("FAILED. DIFFERENT ROWCOUNT: "
-								+ sqlReconstruction(table, columns, lineparts));
-					}
-				}
->>>>>>> be13413f28f625dab901d4d8a19dfc893cb642df
+
 			}
 
 			// Lookup CSV in DB data.
@@ -318,23 +295,6 @@ public class DataTestMatrixLookupComplete1 {
 					System.out.println("FAILED. NOT FOUND IN DB: "
 							+ sqlReconstruction(table, columns, lineparts));
 				}
-<<<<<<< HEAD
-//				if (count > 1) {
-//					if (count != linePartsInLinePartsList(lineparts, csvData)) {
-//						fail = true;
-//						System.out.println("FAILED. DIFFERENT ROWCOUNT: "
-//								+ sqlReconstruction(table, columns, lineparts));
-//					}
-//				}
-=======
-				if (count > 1) {
-					if (count != linePartsInLinePartsList(lineparts, csvData)) {
-						fail = true;
-						System.out.println("FAILED. DIFFERENT ROWCOUNT: "
-								+ sqlReconstruction(table, columns, lineparts));
-					}
-				}
->>>>>>> be13413f28f625dab901d4d8a19dfc893cb642df
 			}
 
 		}
