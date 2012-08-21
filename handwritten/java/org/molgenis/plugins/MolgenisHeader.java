@@ -22,13 +22,14 @@ import org.molgenis.util.Tuple;
  * 
  * @author Morris Swertz
  */
-public class MolgenisHeader extends EasyPluginController<EasyPluginModel>
+public class MolgenisHeader extends EasyPluginController<MolgenisHeaderModel>
 {
 	private static final long serialVersionUID = -7775794887717460675L;
 
 	public MolgenisHeader(String name, ScreenController<?> parent)
 	{
 		super(name, parent);
+		this.setModel(new MolgenisHeaderModel(this));
 	}
 
 	@Override
