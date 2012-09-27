@@ -7,8 +7,6 @@ import java.net.ServerSocket;
 import org.molgenis.framework.db.Database;
 import org.molgenis.util.TarGz;
 
-import app.servlet.MolgenisServlet;
-
 public class Helper {
 
 	public static void deleteDatabase() throws Exception {

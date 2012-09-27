@@ -17,7 +17,6 @@ import webserver.core.WWWServer;
 import webserver.generic.OpenBrowser;
 import webserver.generic.Utils;
 import webserver.gui.Button;
-import app.servlet.MolgenisServlet;
 import app.servlet.UsedMolgenisOptions;
 
 public class WebserverGui extends JFrame implements MouseListener{
@@ -27,7 +26,7 @@ public class WebserverGui extends JFrame implements MouseListener{
 	static Thread webserverthread;
 	MolgenisOptions usedOptions = new UsedMolgenisOptions();
 	OpenBrowser browser = new OpenBrowser();
-	String variant = MolgenisServlet.getMolgenisVariantID();
+	String variant = "Where is the VariantID now?";
 	String title =  variant + " powered by Molgenis Webserver";
 	final String url;
 	boolean init=false;
