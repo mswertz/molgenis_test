@@ -5,7 +5,6 @@ import java.io.File;
 import org.molgenis.framework.db.Database;
 
 import app.CsvImport;
-import app.servlet.MolgenisServlet;
 
 public class TestMrefImport
 {
@@ -18,8 +17,7 @@ public class TestMrefImport
 		Database db = null;
 		try
 		{
-			MolgenisServlet m = new MolgenisServlet();
-			db = (Database) m.getDatabase();
+			db = (Database) app.DatabaseFactory.create();
 		}
 		catch (Exception e)
 		{

@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.molgenis.MolgenisOptions;
 
 import webserver.core.WWWServer;
-import app.servlet.MolgenisServlet;
 import app.servlet.UsedMolgenisOptions;
 
 public class WebserverCmdLine implements Runnable{
@@ -13,7 +12,7 @@ public class WebserverCmdLine implements Runnable{
 	static Thread webserverthread;
 
 	MolgenisOptions usedOptions = new UsedMolgenisOptions();
-	String variant = MolgenisServlet.getMolgenisVariantID();
+	String variant = "Where is the VariantID now?";
 	String title =  variant + " powered by Molgenis Webserver";
 	final String url = "http://localhost:" + WWWServer.DEF_PORT + "/" + variant;
 

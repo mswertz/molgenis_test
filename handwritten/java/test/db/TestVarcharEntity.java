@@ -10,8 +10,6 @@ import molgenis_test.fields.VarcharEntity;
 import org.molgenis.framework.db.Database;
 import org.molgenis.framework.db.DatabaseException;
 
-import app.servlet.MolgenisServlet;
-
 public class TestVarcharEntity  extends TestCase
 {
 	Database db = null;
@@ -20,8 +18,7 @@ public class TestVarcharEntity  extends TestCase
 	{
 		try
 		{
-			MolgenisServlet m = new MolgenisServlet();
-			db = m.getDatabase();
+			db = app.DatabaseFactory.create();
 		}
 		catch (Exception e)
 		{

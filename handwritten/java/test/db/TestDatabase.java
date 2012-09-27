@@ -23,8 +23,6 @@ import org.molgenis.framework.db.Database;
 import org.molgenis.framework.db.DatabaseException;
 import org.molgenis.util.Entity;
 
-import app.servlet.MolgenisServlet;
-
 
 public class TestDatabase extends TestCase
 {
@@ -35,8 +33,7 @@ public class TestDatabase extends TestCase
 	{
 		try
 		{
-			MolgenisServlet m = new MolgenisServlet();
-			db = m.getDatabase();
+			db = app.DatabaseFactory.create();
 		}
 		catch (Exception e)
 		{

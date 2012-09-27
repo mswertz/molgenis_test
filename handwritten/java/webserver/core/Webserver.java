@@ -73,7 +73,6 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 import webserver.generic.Utils;
-import app.servlet.MolgenisServlet;
 
 /// Class to serve java servlets using HTTP
 //<p>
@@ -497,7 +496,7 @@ public class Webserver implements ServletContext, Serializable {
 		// TODO: display address as name and as ip
 		//Utils.console("Webserver @t " + hostName + " - " + getAcceptor() + " is listening.");
 		Utils.console("*********************************************************");
-		Utils.console("APPLICATION IS RUNNING AT: http://localhost:"+DEF_PORT+"/"+MolgenisServlet.getMolgenisVariantID());
+		Utils.console("APPLICATION IS RUNNING AT: http://localhost:"+DEF_PORT+"/"+"Where is the VariantID now?");
 		Utils.console("*********************************************************");
 		try {
 			while (running) {
