@@ -53,9 +53,7 @@ public class ChooseLibrary extends EasyPluginController<ChooseLibraryModel>
 	public void changelibrary(Database db, Tuple request)
 	{
 		logger.info("changelibrary: " + request);
-		String lib = request.getString("library");
-		if("JQUERY".equals(lib)) HtmlSettings.uiToolkit = UiToolkit.JQUERY;
-		if("DEFAULT".equals(lib)) HtmlSettings.uiToolkit = UiToolkit.ORIGINAL;		
+		String lib = request.getString("library");		
 	}
 	
 

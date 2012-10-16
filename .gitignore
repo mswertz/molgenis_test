@@ -1,0 +1,8 @@
+/WebContent/generated-doc/*
+/WebContent/generated-res/*
+/bin/*
+/build/*
+/generated/*
+logger.out
+test-output/*
+
